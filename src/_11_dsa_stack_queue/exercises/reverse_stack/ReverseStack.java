@@ -1,4 +1,4 @@
-package _11_dsa_stac_queue.exercises.reverse_stack;
+package _11_dsa_stack_queue.exercises.reverse_stack;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package _11_dsa_stac_queue.exercises.occurrences_of_words;
+package _11_dsa_stack_queue.exercises.occurrences_of_words;
 
 import java.util.Map;
 import java.util.Scanner;

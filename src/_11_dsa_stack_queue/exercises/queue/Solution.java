@@ -1,4 +1,4 @@
-package _11_dsa_stac_queue.exercises.queue;
+package _11_dsa_stack_queue.exercises.queue;
 
 public class Solution {
     static class Node {

@@ -1,4 +1,4 @@
-package _11_dsa_stac_queue.optional.practises;
+package _11_dsa_stack_queue.optional.practises;
 
 import java.util.Arrays;
 

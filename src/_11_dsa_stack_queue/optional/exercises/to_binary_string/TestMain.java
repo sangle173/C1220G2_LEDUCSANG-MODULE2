@@ -1,4 +1,4 @@
-package _11_dsa_stac_queue.optional.exercises.to_binary_string;
+package _11_dsa_stack_queue.optional.exercises.to_binary_string;
 
 import java.util.Scanner;
 import java.util.Stack;
