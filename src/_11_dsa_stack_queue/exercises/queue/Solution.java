@@ -61,8 +61,8 @@ public class Solution {
         enQueue(queue, 6);
         displayQueue(queue);
         System.out.println();
-        System.out.println("Deleted value = "+deQueue(queue));
-        System.out.println("Deleted value = "+deQueue(queue));
+        System.out.println("Deleted value = " + deQueue(queue));
+        System.out.println("Deleted value = " + deQueue(queue));
 
     }
 }

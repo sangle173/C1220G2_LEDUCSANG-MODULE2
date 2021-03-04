@@ -9,13 +9,13 @@ public class ConvertTemperature {
         double c;
         do {
 
-            Scanner scanner=new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
             System.out.println("1. Fahrenheit to Celsius");
             System.out.println("2. Celsius to Fahrenheit");
             System.out.println("0. Exit");
             System.out.println("Enter your choice");
-            choice=scanner.nextInt();
-            switch (choice){
+            choice = scanner.nextInt();
+            switch (choice) {
                 case 1:
                     System.out.println("Enter fahrenheit: ");
                     f = scanner.nextDouble();
@@ -30,11 +30,13 @@ public class ConvertTemperature {
                     System.exit(0);
                     break;
             }
-        }while (choice!=0);
+        } while (choice != 0);
     }
-    public static double cToF(double c){
+
+    public static double cToF(double c) {
         return (9.0 / 5) * c + 32;
     }
+
     public static double fToC(double f) {
         double c = (5.0 / 9) * (f - 32);
         return c;

@@ -10,9 +10,9 @@ public class FindChartInString {
         System.out.println(str);
         System.out.println("Enter a char you are looking in string");
         char key = scanner.next().charAt(0);
-        int count=0;
-        for (int i = 0; i <str.length() ; i++) {
-            if (str.charAt(i)==key){
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == key) {
                 count++;
             }
         }

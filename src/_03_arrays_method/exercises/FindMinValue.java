@@ -26,10 +26,11 @@ public class FindMinValue {
         }
         System.out.println("\nMin value in list is : " + minValue(arr));
     }
+
     public static int minValue(int[] array) {
         int minArr = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (array[i]<minArr) {
+            if (array[i] < minArr) {
                 minArr = array[i];
             }
         }

@@ -46,7 +46,7 @@ public class DrawMenu {
                 default:
                     System.out.println("Please choose the another number");
             }
-        } while (choice!=0);
+        } while (choice != 0);
     }
 
 }

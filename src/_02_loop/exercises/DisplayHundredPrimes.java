@@ -2,12 +2,13 @@ package _02_loop.exercises;
 
 public class DisplayHundredPrimes {
     public static void main(String[] args) {
-        for (int i = 0; i <=100 ; i++) {
-            if (checkPrimes(i)){
+        for (int i = 0; i <= 100; i++) {
+            if (checkPrimes(i)) {
                 System.out.println(i);
             }
         }
     }
+
     public static boolean checkPrimes(int n) {
         // so nguyen n < 2 khong phai la so nguyen to
         if (n < 2) {

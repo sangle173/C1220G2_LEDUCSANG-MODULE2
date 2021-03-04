@@ -10,7 +10,7 @@ public class DisplayPrimes {
         int count = 0;
         int n = 2;
         while (count < num) {
-            if (checkPrimes(n)){
+            if (checkPrimes(n)) {
                 count++;
                 System.out.println(n);
             }

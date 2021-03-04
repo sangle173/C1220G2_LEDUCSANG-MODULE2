@@ -13,6 +13,7 @@ public interface MyList<E> extends Iterable<E> {
     E set(E value, int index);
 
     void clear();
+
     Object clone();
 
     int size();

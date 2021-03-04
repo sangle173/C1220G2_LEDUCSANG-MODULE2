@@ -46,11 +46,13 @@ public class MoveablePoint extends Point2D {
     public float[] getSpeed() {
         return new float[]{getX(), getY(), getXSpeed(), getYSpeed()};
     }
-    public MoveablePoint move(){
-        setX(getX()+xSpeed);
-        setY(getY()+ySpeed);
+
+    public MoveablePoint move() {
+        setX(getX() + xSpeed);
+        setY(getY() + ySpeed);
         return this;
     }
+
     @Override
     public String toString() {
         return "MoveablePoint{" +
@@ -58,6 +60,6 @@ public class MoveablePoint extends Point2D {
                 ", y=" + getY() +
                 ", xSpeed=" + xSpeed +
                 ", ySpeed=" + ySpeed +
-                "} " ;
+                "} ";
     }
 }

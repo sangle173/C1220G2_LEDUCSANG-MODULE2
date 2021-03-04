@@ -11,12 +11,12 @@ public class FindValueInArrays {
         boolean isExit = false;
         for (int i = 0; i < students.length; i++) {
             if (students[i].equals(name)) {
-                System.out.println("The name you looking " + name + " is available at: " + (i + 1)+" in the list");
+                System.out.println("The name you looking " + name + " is available at: " + (i + 1) + " in the list");
                 isExit = true;
                 break;
             }
         }
         if (!isExit)
-            System.out.println("Not found " + "'"+name+"'" + " in the list");
+            System.out.println("Not found " + "'" + name + "'" + " in the list");
     }
 }

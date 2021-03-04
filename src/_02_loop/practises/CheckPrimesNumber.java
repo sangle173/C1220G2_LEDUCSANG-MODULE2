@@ -11,19 +11,19 @@ public class CheckPrimesNumber {
         if (num < 2)
             System.out.println(num + " is not a prime");
         else {
-            int i=2;
-            boolean check =true;
-            while (i<= Math.sqrt(num)){
-                if (num%i==0){
-                    check=false;
+            int i = 2;
+            boolean check = true;
+            while (i <= Math.sqrt(num)) {
+                if (num % i == 0) {
+                    check = false;
                     break;
                 }
                 i++;
             }
             if (check)
-                System.out.println(num+" is a prime");
+                System.out.println(num + " is a prime");
             else
-                System.out.println(num +" is not a prime");
+                System.out.println(num + " is not a prime");
         }
     }
 }

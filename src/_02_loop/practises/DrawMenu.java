@@ -50,6 +50,6 @@ public class DrawMenu {
                 default:
                     System.out.println("Please try another number");
             }
-        }while (choice!=0);
+        } while (choice != 0);
     }
 }

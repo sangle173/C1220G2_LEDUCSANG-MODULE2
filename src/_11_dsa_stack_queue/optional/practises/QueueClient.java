@@ -2,7 +2,7 @@ package _11_dsa_stack_queue.optional.practises;
 
 public class QueueClient {
     public static void main(String[] args) {
-        MyQueue queue=new MyQueue(6);
+        MyQueue queue = new MyQueue(6);
         queue.enqueque(4);
         queue.dequeue();
         queue.enqueque(4);

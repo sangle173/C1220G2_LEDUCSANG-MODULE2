@@ -21,7 +21,7 @@ public class Circle {
     }
 
     public double getArea() {
-        return PI*radius*radius;
+        return PI * radius * radius;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package _06_inheritance_polymorphism.exercises.circle_cylinder;
 
-public class Cylinder extends Circle{
+public class Cylinder extends Circle {
     private double height = 2.0;
 
     public Cylinder() {

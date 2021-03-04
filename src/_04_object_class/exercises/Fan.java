@@ -79,14 +79,14 @@ public class Fan {
 
     @Override
     public String toString() {
-        if (isOn){
-            return "Fan is ON {"+
+        if (isOn) {
+            return "Fan is ON {" +
                     "speed=" + speed +
                     ", radius=" + radius +
                     ", color='" + color + '\'' +
                     '}';
-        }else {
-            return "Fan is OFF {"+
+        } else {
+            return "Fan is OFF {" +
                     "radius=" + radius +
                     ", color='" + color + '\'' +
                     '}';
@@ -104,7 +104,7 @@ public class Fan {
         fan2.setRadius(5);
         fan2.setColor("Blue");
         fan2.setSpeed(MEDIUM);
-        System.out.println("Fan 1 info "+fan1.toString());
-        System.out.println("Fan 2 info "+fan2.toString());
+        System.out.println("Fan 1 info " + fan1.toString());
+        System.out.println("Fan 2 info " + fan2.toString());
     }
 }

@@ -73,9 +73,9 @@ public class Employees {
         System.out.println("Enter first name");
         String firstName = scanner.next();
         System.out.println("Enter salary");
-        int salary=scanner.nextInt();
-        Employees employees=new Employees(id, lastName, firstName, salary);
-        System.out.println("Employee infor "+employees.displayEmployee());
-        System.out.println("Employee annual salary "+employees.getAnnualSalary());
+        int salary = scanner.nextInt();
+        Employees employees = new Employees(id, lastName, firstName, salary);
+        System.out.println("Employee infor " + employees.displayEmployee());
+        System.out.println("Employee annual salary " + employees.getAnnualSalary());
     }
 }

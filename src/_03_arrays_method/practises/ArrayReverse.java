@@ -16,23 +16,23 @@ public class ArrayReverse {
         arr = new int[size];
         int i = 0;
         while (i < arr.length) {
-            System.out.println("Enter element "+(i+1)+" : ");
+            System.out.println("Enter element " + (i + 1) + " : ");
             arr[i] = scanner.nextInt();
             i++;
         }
         System.out.println("Display arrays");
-        for (int element : arr){
-            System.out.print(element+"\t");
+        for (int element : arr) {
+            System.out.print(element + "\t");
         }
         System.out.println("\n==============================");
-        for (int j = 0; j <arr.length/2 ; j++) {
-            int temp=arr[j];
-            arr[j]=arr[arr.length-1-j];
-            arr[arr.length-1-j]=temp;
+        for (int j = 0; j < arr.length / 2; j++) {
+            int temp = arr[j];
+            arr[j] = arr[arr.length - 1 - j];
+            arr[arr.length - 1 - j] = temp;
         }
         System.out.println("Array after reversed: ");
-        for (int j = 0; j <arr.length ; j++) {
-            System.out.print(arr[j]+"\t");
+        for (int j = 0; j < arr.length; j++) {
+            System.out.print(arr[j] + "\t");
         }
     }
 }

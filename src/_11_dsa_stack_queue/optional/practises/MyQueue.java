@@ -28,30 +28,31 @@ public class MyQueue {
         return status;
     }
 
-    public void enqueque(int item){
-        if (isQueueFull()){
-            System.out.println("Overflow!, unable to add element: "+ item);
-        }else {
+    public void enqueque(int item) {
+        if (isQueueFull()) {
+            System.out.println("Overflow!, unable to add element: " + item);
+        } else {
             tail++;
-            if (tail==capacity-1){
-                tail=0;
+            if (tail == capacity - 1) {
+                tail = 0;
             }
-            queueArray[tail]=item;
+            queueArray[tail] = item;
             currentSize++;
-            System.out.println("Element "+item+" is pushed to Queue");
+            System.out.println("Element " + item + " is pushed to Queue");
         }
 
     }
-    public void dequeue(){
-        if (isQueueEmpty()){
+
+    public void dequeue() {
+        if (isQueueEmpty()) {
             System.out.println("Underflow ! Unable to remove element from Queue");
-        }else {
+        } else {
             head++;
-            if (head==capacity-1){
+            if (head == capacity - 1) {
                 System.out.println("Pop operation done ! removed: " + queueArray[head - 1]);
-                head=0;
-            }else {
-                System.out.println("Pop operation done ! removed: "+queueArray[head-1]);
+                head = 0;
+            } else {
+                System.out.println("Pop operation done ! removed: " + queueArray[head - 1]);
             }
             currentSize++;
         }

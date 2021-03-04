@@ -60,7 +60,7 @@ public class ProductManager {
         Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("Enter your choice Menu Search");
-            choiceSearch=Integer.parseInt(scanner.nextLine());
+            choiceSearch = Integer.parseInt(scanner.nextLine());
             switch (choiceSearch) {
                 case 1:
                     System.out.println("Enter name your want to Search");
