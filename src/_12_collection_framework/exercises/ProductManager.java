@@ -21,7 +21,7 @@ public class ProductManager {
         int choice;
         Scanner scanner = new Scanner(System.in);
         do {
-            System.out.println("Enter your choice Main");
+            System.out.println("Enter your choice demo.Main");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -54,7 +54,7 @@ public class ProductManager {
 
     public static void displayMenuSearch() {
         System.out.println("1.Enter name your want to Search \n" +
-                "2.Back to Main Menu \n" +
+                "2.Back to demo.Main Menu \n" +
                 "0.Exit");
         int choiceSearch;
         Scanner scanner = new Scanner(System.in);
@@ -83,7 +83,7 @@ public class ProductManager {
 
     public static void displayMenuDelete() {
         System.out.println("1.Enter id your want to delete \n" +
-                "2.Back to Main Menu \n" +
+                "2.Back to demo.Main Menu \n" +
                 "0.Exit");
         int choiceDelete;
         Scanner scanner = new Scanner(System.in);
@@ -112,7 +112,7 @@ public class ProductManager {
 
     public static void displayMenuEdit() {
         System.out.println("1.Enter id your want to edit \n" +
-                "2.Back to Main Menu \n" +
+                "2.Back to demo.Main Menu \n" +
                 "0.Exit");
         int choiceEdit;
         Scanner scanner = new Scanner(System.in);
@@ -142,7 +142,7 @@ public class ProductManager {
     public static void displayMenuSort() {
         System.out.println("1.Sort ascending type \n" +
                 "2.Sort decreasing type \n" +
-                "3.Back to Main Menu \n" +
+                "3.Back to demo.Main Menu \n" +
                 "0.Exit");
         int choiceSortType;
         Scanner scanner = new Scanner(System.in);
@@ -185,7 +185,7 @@ public class ProductManager {
 
     public static void displayMenuAddProduct() {
         System.out.println("1.Add new product with id and name \n" +
-                "2.Back to Main menu \n" +
+                "2.Back to demo.Main menu \n" +
                 "0.Exit");
         Scanner scanner = new Scanner(System.in);
         int choiceAddProduct;
