@@ -14,9 +14,10 @@ public class Engineering extends Officer {
         super(name, birthDay, gender, address);
         this.trainingIndustry = trainingIndustry;
     }
-    public Engineering(String[] engineeringInfo){
-        super(engineeringInfo[0],engineeringInfo[1],engineeringInfo[2],engineeringInfo[3]);
-        this.trainingIndustry=engineeringInfo[4];
+
+    public Engineering(String[] engineeringInfo) {
+        super(engineeringInfo[0], engineeringInfo[1], engineeringInfo[2], engineeringInfo[3]);
+        this.trainingIndustry = engineeringInfo[4];
     }
 
     public String getTrainingIndustry() {

@@ -15,9 +15,10 @@ public class Worker extends Officer {
         super(name, birthDay, gender, address);
         this.level = level;
     }
-    public Worker(String[] workerInfo){
-        super(workerInfo[0],workerInfo[1],workerInfo[2],workerInfo[3]);
-        this.level=workerInfo[4];
+
+    public Worker(String[] workerInfo) {
+        super(workerInfo[0], workerInfo[1], workerInfo[2], workerInfo[3]);
+        this.level = workerInfo[4];
     }
 
     public String getLevel() {

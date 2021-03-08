@@ -147,8 +147,8 @@ public class MainController {
         int choiceSortMenu;
         do {
             System.out.println("Enter your choice");
-            choiceSortMenu=Integer.parseInt(scanner.nextLine());
-            switch (choiceSortMenu){
+            choiceSortMenu = Integer.parseInt(scanner.nextLine());
+            switch (choiceSortMenu) {
                 case 1:
                     Collections.sort(officerList, new Comparator<Officer>() {
                         @Override
@@ -176,7 +176,7 @@ public class MainController {
                 default:
                     System.out.println("Please try again");
             }
-        }while (choiceSortMenu!=0);
+        } while (choiceSortMenu != 0);
 
     }
 
@@ -215,10 +215,10 @@ public class MainController {
 
     private void searchByNameOfEmployee() {
         System.out.println("Enter the name of Employee you want to search");
-        String nameSearch=scanner.nextLine();
-        for (Officer employee:officerList) {
-            if (employee instanceof Employee){
-                if (nameSearch.equals(employee.getName())){
+        String nameSearch = scanner.nextLine();
+        for (Officer employee : officerList) {
+            if (employee instanceof Employee) {
+                if (nameSearch.equals(employee.getName())) {
                     System.out.println(employee);
                 }
             }
@@ -228,10 +228,10 @@ public class MainController {
 
     private void searchByNameOfWorker() {
         System.out.println("Enter the name of Worker you want to search");
-        String nameSearch=scanner.nextLine();
-        for (Officer worker:officerList) {
-            if (worker instanceof Worker){
-                if (nameSearch.equals(worker.getName())){
+        String nameSearch = scanner.nextLine();
+        for (Officer worker : officerList) {
+            if (worker instanceof Worker) {
+                if (nameSearch.equals(worker.getName())) {
                     System.out.println(worker);
                 }
             }
@@ -241,10 +241,10 @@ public class MainController {
 
     private void searchByNameOfEngineering() {
         System.out.println("Enter the name of Engineering you want to search");
-        String nameSearch=scanner.nextLine();
-        for (Officer engineering:officerList) {
-            if (engineering instanceof Engineering){
-                if (nameSearch.equals(engineering.getName())){
+        String nameSearch = scanner.nextLine();
+        for (Officer engineering : officerList) {
+            if (engineering instanceof Engineering) {
+                if (nameSearch.equals(engineering.getName())) {
                     System.out.println(engineering);
                 }
             }
