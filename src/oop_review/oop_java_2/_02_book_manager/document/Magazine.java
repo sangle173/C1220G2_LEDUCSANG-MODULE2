@@ -17,6 +17,11 @@ public class Magazine extends Document {
         this.noOfPublish = noOfPublish;
         this.monthOfPublish = monthOfPublish;
     }
+    public Magazine(String[] magazineInfo){
+        super(magazineInfo[0], magazineInfo[1], Integer.parseInt(magazineInfo[2]));
+        this.noOfPublish=Integer.parseInt(magazineInfo[3]);
+        this.monthOfPublish=magazineInfo[4];
+    }
 
     public int getNoOfPublish() {
         return noOfPublish;
@@ -44,7 +49,7 @@ public class Magazine extends Document {
     @Override
     public String showInfo() {
         return "Magazines{" +
-                ", noOfNumber='" + super.getNoOfNumber() + '\'' +
+                "noOfNumber='" + super.getNoOfNumber() + '\'' +
                 ", producerName='" + super.getProducerName() + '\'' +
                 ", publishNumber='" + super.getPublishNumber() + '\'' +
                 ", noOfPublish='" +noOfPublish + '\'' +

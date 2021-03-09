@@ -14,10 +14,6 @@ public class BookManager {
     private List<Book> bookLists = new ArrayList<>();
     private BookManager bookManager;
 
-    //    public BookManager(){
-//        bookManager=new BookManager();
-//        bookLists=bookManager.writerReader.readFromFile();
-//    }
     public void add() {
         String noOfNumber = inputNoOfNumber();
         String producerName = inputProducerName();
@@ -39,7 +35,7 @@ public class BookManager {
         return bookList;
     }
 
-    public void showall() {
+    public void showAll() {
         List<Book> bookList = show();
         int count = 1;
         for (Book book : bookList) {
@@ -47,12 +43,12 @@ public class BookManager {
             count++;
         }
     }
-    public void searchByAuthorName(){
+    public void searchByProducerName(){
         List<Book> bookLists = show();
-        System.out.println("Enter author name your want to search");
-        String authorNameSearch=scanner.nextLine();
-        for (Book book:bookLists) {
-            if (book.getAuthorName().equals(authorNameSearch)){
+        System.out.println("Enter  name your want to search");
+        String producerName = scanner.nextLine();
+        for (Book book : bookLists) {
+            if (book.getProducerName().equals(producerName)) {
                 System.out.println(book.showInfo());
                 return;
             }
@@ -60,9 +56,23 @@ public class BookManager {
         System.out.println("The name not available in book list");
     }
 
-    public void sortByAuthorName() {
+    public void searchByAuthorName() {
         List<Book> bookLists = show();
-        Collections.sort(bookLists, new SortByAuthorName());
+        System.out.println("Enter author name your want to search");
+        String authorNameSearch = scanner.nextLine();
+        for (Book book : bookLists) {
+            if (book.getAuthorName().equals(authorNameSearch)) {
+                System.out.println(book.showInfo());
+                return;
+            }
+        }
+        System.out.println("The name not available in book list");
+    }
+
+    public void sortByProducerName() {
+        List<Book> bookLists = show();
+        Collections.sort(bookLists, new SortByProducerName());
+        System.out.println("The document has been sorted");
     }
 
     public void sortByNoOfPage() {

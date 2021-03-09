@@ -49,7 +49,7 @@ public class Book extends Document {
     @Override
     public String showInfo() {
         return "Book{" +
-                ", noOfNumber='" + super.getNoOfNumber() + '\'' +
+                "noOfNumber='" + super.getNoOfNumber() + '\'' +
                 ", producerName='" + super.getProducerName() + '\'' +
                 ", publishNumber='" + super.getPublishNumber() + '\'' +
                 ", authorName='" + authorName + '\'' +

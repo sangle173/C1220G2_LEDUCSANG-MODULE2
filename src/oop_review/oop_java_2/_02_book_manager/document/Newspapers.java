@@ -15,6 +15,11 @@ public class Newspapers extends Document {
         this.dayOfPublish = dayOfPublish;
     }
 
+    public Newspapers(String[] newspaperInfo) {
+        super(newspaperInfo[0], newspaperInfo[1], Integer.parseInt(newspaperInfo[2]));
+        this.dayOfPublish = newspaperInfo[3];
+    }
+
     public String getDayOfPublish() {
         return dayOfPublish;
     }
@@ -25,14 +30,14 @@ public class Newspapers extends Document {
 
     @Override
     public String toString() {
-        return super.toString()+","+
+        return super.toString() + "," +
                 dayOfPublish;
     }
 
     @Override
     public String showInfo() {
         return "Newspaper{" +
-                ", noOfNumber='" + super.getNoOfNumber() + '\'' +
+                "noOfNumber='" + super.getNoOfNumber() + '\'' +
                 ", producerName='" + super.getProducerName() + '\'' +
                 ", publishNumber='" + super.getPublishNumber() + '\'' +
                 ", authorName='" + dayOfPublish + '\'' +
