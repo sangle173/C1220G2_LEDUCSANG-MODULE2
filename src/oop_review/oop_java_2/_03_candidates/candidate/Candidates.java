@@ -1,4 +1,4 @@
-package oop_review.oop_java_2.candidates.candidate;
+package oop_review.oop_java_2._03_candidates.candidate;
 
 public abstract class Candidates {
     private String identificationNumber, name, address, priority;

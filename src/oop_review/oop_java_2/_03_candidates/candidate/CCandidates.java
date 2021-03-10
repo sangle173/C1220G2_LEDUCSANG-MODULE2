@@ -1,4 +1,4 @@
-package oop_review.oop_java_2.candidates.candidate;
+package oop_review.oop_java_2._03_candidates.candidate;
 
 public class CCandidates extends Candidates implements Subject {
     private String subject1, subject2, subject3;

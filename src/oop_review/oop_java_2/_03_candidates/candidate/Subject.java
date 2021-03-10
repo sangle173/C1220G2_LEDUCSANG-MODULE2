@@ -1,4 +1,4 @@
-package oop_review.oop_java_2.candidates.candidate;
+package oop_review.oop_java_2._03_candidates.candidate;
 
 public interface Subject {
     public static final String MATH = "Math";
