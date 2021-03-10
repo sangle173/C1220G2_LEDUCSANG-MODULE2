@@ -1,6 +1,6 @@
 package oop_review.oop_java_2._03_candidates.candidate;
 
-public class ACandidates extends Candidates implements Subject {
+public class ACandidates extends Candidates {
     private String subject1, subject2, subject3;
 
     public ACandidates() {
@@ -45,9 +45,9 @@ public class ACandidates extends Candidates implements Subject {
 
     @Override
     public String toString() {
-        return super.toString()+","+
-                subject1 +","+
-                subject2 +","+
+        return super.toString() + "," +
+                subject1 + "," +
+                subject2 + "," +
                 subject3;
     }
 

@@ -1,6 +1,6 @@
 package oop_review.oop_java_2._03_candidates.candidate;
 
-public abstract class Candidates {
+public abstract class Candidates implements Subject{
     private String identificationNumber, name, address, priority;
 
     public Candidates() {

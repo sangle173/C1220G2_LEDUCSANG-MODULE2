@@ -1,6 +1,6 @@
 package oop_review.oop_java_2._03_candidates.candidate;
 
-public class CCandidates extends Candidates implements Subject {
+public class CCandidates extends Candidates {
     private String subject1, subject2, subject3;
 
     public CCandidates(String subject1, String subject2, String subject3) {
