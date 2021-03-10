@@ -1,73 +1,72 @@
 package _16_io_text_file.exercises.copy_file_text;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CopyFileText {
-    private static final String  TARGET_PATH= "src\\_16_io_text_file\\practises\\";
-    private static final String  SOURCE_PATH= "src\\_16_io_text_file\\exercises\\copy_file_text\\";
+    private static final String TARGET_PATH = "src\\_16_io_text_file\\practises\\";
+    private static final String SOURCE_PATH = "src\\_16_io_text_file\\exercises\\copy_file_text\\";
 
-    public static StringBuffer readFileText(String fileName) throws Exception {
-        StringBuffer content = new StringBuffer();
+    public static List<String> readFromFile(String fileName) {
+        List<String> list = new ArrayList<>();
+        File file = new File(SOURCE_PATH + fileName);
+        BufferedReader bufferedReader = null;
         try {
-            File inputFile = new File(SOURCE_PATH + fileName);
-
-            if (!inputFile.exists()) {
-                throw new FileNotFoundException();
+            if (!file.exists()) {
+                file.createNewFile();
             }
-
-            BufferedReader br = new BufferedReader(new FileReader(inputFile));
-            String line = "";
-            while ((line = br.readLine()) != null) {
-                content.append(line + "\n");
-            }
-            br.close();
-        } catch (Exception e) {
-            System.err.println("File not found or not available content!");
-        } finally {
-            return content;
-        }
-    }
-
-    public static void writeFileText(String fileName, StringBuffer content) {
-        FileWriter fileWriter = null;
-        try {
-            File outputFile = new File(TARGET_PATH + fileName);
-            if (outputFile.exists()) {
-                System.out.println("File already exist!");
-            } else {
-                fileWriter = new FileWriter(outputFile);
-                int i;
-                for (i = 0; i < content.length(); i++) {
-                    fileWriter.write(content.charAt(i));
-                }
-                System.out.println("Done");
-                System.out.println("File contains " + i + " characters");
+            bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                list.add(line);
             }
         } catch (IOException e) {
+            System.out.println("Error in reading.");
             e.printStackTrace();
         } finally {
-            if (fileWriter != null) {
-                try {
-                    fileWriter.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try {
+                if (bufferedReader != null) {
+                    bufferedReader.close();
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
+    public static void writeToFile(String fileName, List<String> list, boolean writeMode) {
+        File file = new File(TARGET_PATH + fileName);
+        BufferedWriter bufferedWriter = null;
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            bufferedWriter = new BufferedWriter(new FileWriter(file, writeMode));
+            for (String string : list) {
+                bufferedWriter.write(string, 0, string.length());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Error in writing.");
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
 
-    public static void main(String[] args) throws Exception {
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the name of Input file: ");
-        String inputFileName = scanner.nextLine();
-        System.out.print("Enter the name of Output file: ");
-        String outputFileName = scanner.nextLine();
-        try {
-            StringBuffer content = readFileText(inputFileName);
-            writeFileText(outputFileName, content);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+        List<String> list = readFromFile("FileSource1.txt");
+        writeToFile("FileTarget1.txt", list, false);
+        list = readFromFile("FileSource2.txt");
+        writeToFile("FileTarget2.txt", list, false);
     }
 }

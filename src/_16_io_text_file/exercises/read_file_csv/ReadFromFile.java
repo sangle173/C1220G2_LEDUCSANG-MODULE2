@@ -40,8 +40,6 @@ public class ReadFromFile {
 
     public static void main(String[] args) {
         List<String[]> strings = readFromFile();
-        for (String[] string : strings) {
-            System.out.println(string[5]);
-        }
+        strings.forEach(string -> System.out.println(string[5]));
     }
 }
