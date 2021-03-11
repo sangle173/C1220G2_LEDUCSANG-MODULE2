@@ -9,13 +9,14 @@ import java.util.List;
 public class WriterAndReaderFunc{
     private static final String PATH = "D:\\C1220G2_LEDUCSANG-MODULE2\\src\\_17_binary_file_serialization\\exercises\\data\\product.txt";
 
-    public static void writeToFile(List<Product> list) throws IOException {
+    public void writeToFile(List<Product> list) throws IOException {
         ObjectOutputStream oos = null;
         try {
             oos = new ObjectOutputStream(new FileOutputStream(PATH));
-            for (Product product:list) {
-                oos.writeObject(product);
-            }
+//            for (Product product:list) {
+//                oos.writeObject(product);
+//            }
+            oos.writeObject(list);
             oos.flush();
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -25,17 +26,18 @@ public class WriterAndReaderFunc{
         System.out.println("success...");
     }
 
-    public void readFromFile() throws IOException {
+    public List<Product> readFromFile() throws IOException {
         ObjectInputStream ois = null;
+        List<Product> productList=new ArrayList<>();
         try {
             ois = new ObjectInputStream(new FileInputStream(PATH));
-            Product product = (Product) ois.readObject();
-            System.out.println(product);
+            productList=(List<Product>) ois.readObject();
+//            Product product = (Product) ois.readObject();
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
         } finally {
             ois.close();
         }
-
+        return productList;
     }
 }
