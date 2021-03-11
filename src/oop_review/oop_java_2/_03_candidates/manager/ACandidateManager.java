@@ -60,7 +60,7 @@ public class ACandidateManager extends CandidatesManager implements Subject {
         Iterator<String[]> itr = list.iterator();
         while (itr.hasNext()) {
             String[] strings = itr.next();
-            if (strings[0].equals(identificationNumberSearch)){
+            if (strings[0].equals(identificationNumberSearch)) {
                 itr.remove();
                 System.out.println("Deleted");
                 break;

@@ -37,6 +37,7 @@ public class MainController {
                     searchCandidatesMenu();
                     break;
                 case "4":
+                    deleteMenu();
                     break;
                 case "0":
                     System.out.println("exited!");
@@ -168,7 +169,42 @@ public class MainController {
         searchCandidatesMenu();
     }
     public void deleteMenu(){
-        System.out.println("--Menu delete A Candidates--");
-        aCandidateManager.deleteByIdentificationNumber();
+        System.out.println("--Menu delete Candidates--\n" +
+                "1.Delete by identification number of A Candidates\n" +
+                "2.Delete by identification number of B Candidates\n" +
+                "3.Delete by identification number of C Candidates\n" +
+                "4.Back to Main Menu\n" +
+                "0.Exit");
+        System.out.println("Please choose: ");
+        String choose = null;
+        boolean exit = false;
+
+        while (true) {
+            choose = scanner.nextLine();
+            switch (choose) {
+                case "1":
+                    aCandidateManager.deleteByIdentificationNumber();
+                    break;
+                case "2":
+                    showAllCandidatesMenu();
+                    break;
+                case "3":
+                    break;
+                case "4":
+                    displayMainMenu();
+                    break;
+                case "0":
+                    System.out.println("exited!");
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("invalid! please choose action in below menu:");
+                    break;
+            }
+            if (exit) {
+                break;
+            }
+        }
+        deleteMenu();
     }
 }

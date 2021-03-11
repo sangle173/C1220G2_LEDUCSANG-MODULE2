@@ -9,6 +9,7 @@ import java.util.List;
 
 public class ReadFromFile {
     public static final String FILE_PATH = "D:\\C1220G2_LEDUCSANG-MODULE2\\src\\_16_io_text_file\\exercises\\read_file_csv\\Demo.csv";
+    public static final String REGEX = ",";
 
     public static List<String[]> readFromFile() {
         List<String[]> list = new ArrayList<>();
@@ -22,7 +23,7 @@ public class ReadFromFile {
             String line = "";
             String[] temp;
             while ((line = bufferedReader.readLine()) != null) {
-                temp = line.split(",");
+                temp = line.split(REGEX);
                 list.add(temp);
             }
         } catch (IOException e) {
